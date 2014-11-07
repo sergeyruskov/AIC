@@ -24,7 +24,7 @@
 
 // Родитель списков на самом деле не subscribe, а dropdown-lists
 %dropdown-list--subscribe {
-	@include sm-and-md {
+	@include sm-and-lg {
 		columns: 4 auto;
 	}
 }

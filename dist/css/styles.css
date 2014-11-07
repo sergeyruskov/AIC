@@ -6969,7 +6969,7 @@ h1, h4 {
   padding: 0 0.5384615385rem 0 0.2307692308rem;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) {
   .dropdown-list--subscribe {
     -webkit-columns: 4 auto;
        -moz-columns: 4 auto;
