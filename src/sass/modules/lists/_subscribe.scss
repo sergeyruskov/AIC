@@ -1,12 +1,13 @@
 .subscribe {
-	@extend .col-xs-12;
-	@extend .col-sm-3;
+	@extend .pull-left;
+	width         : 100%;
 	border-radius : $border-radius-base;
 
 	&__links {
 		@extend .show;
 		@extend %text-shadow-lists;
 		@extend %overflow-hidden;
+		@extend %isTransition--hover;
 		
 		color        : $text-color;
 		padding      : rem(5px) 0;
@@ -21,3 +22,9 @@
 	}
 }
 
+// Родитель списков на самом деле не subscribe, а dropdown-lists
+%dropdown-list--subscribe {
+	@include sm-and-md {
+		columns: 4 auto;
+	}
+}

@@ -50,9 +50,27 @@ $screen-xs-min : 481px;
 	}
 }
 
+@mixin sm-and-md {
+	@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+		@content;
+	}
+}
+
+@mixin sm-and-lg {
+	@media (min-width: $screen-sm-min) {
+		@content;
+	}
+}
+
 // Более 1200px включительно
 @mixin lg {
 	@media (min-width: $screen-lg-min) {
+		@content;
+	}
+}
+
+@mixin md-and-lg {
+	@media (min-width: $screen-md-min) {
 		@content;
 	}
 }

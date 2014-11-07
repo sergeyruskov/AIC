@@ -1,7 +1,9 @@
 .logo--main {
-	@extend .col-xs-12;
 	// Из state состояние hover
 	@extend %isLogo--hover;
+	@extend .show;
+	@extend %align-center;
+
 
 	// Декоративные эффекты
 	color         : $white;

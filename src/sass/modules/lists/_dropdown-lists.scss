@@ -1,11 +1,16 @@
 // Выпадающее меню
 .dropdown-list {
 	background-color: $list-bg;
-	position        : static;
+	position        : relative;
 	@include xs {
 		max-width   : rem(436px);
 		padding-left: rem(10px);
 
 		margin      : auto;
 	}
+}
+
+.dropdown-list--subscribe {
+	@extend .dropdown-list;
+	@extend %dropdown-list--subscribe;
 }

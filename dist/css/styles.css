@@ -4,7 +4,7 @@
   display: inline-block;
 }
 
-.list__header {
+.logo--main, .list__header {
   text-align: center;
 }
 
@@ -12,7 +12,7 @@
   overflow: hidden;
 }
 
-.source__buttons--success, .source__buttons--danger, .big-news, .list__header:before {
+.source__buttons--success, .source__buttons--danger, .big-news, .big-news__img--wrapper, .list__header:before {
   position: relative;
 }
 
@@ -1761,14 +1761,14 @@ pre code {
   clear: both;
 }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .settings, .subscribe, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .logo--main, .navbar-default, .settings, .subscribe, .col-sm-12, .navbar-default, .col-md-12, .navbar-default, .col-lg-12, .navbar-default {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .settings, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .navbar-default, .settings, .col-sm-12, .navbar-default, .col-md-12, .navbar-default, .col-lg-12, .navbar-default {
   position: relative;
   min-height: 1px;
   padding-left: 0;
   padding-right: 0;
 }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .logo--main, .navbar-default, .settings, .subscribe {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .navbar-default, .settings {
   float: left;
 }
 
@@ -1816,7 +1816,7 @@ pre code {
   width: 91.6666666667%;
 }
 
-.col-xs-12, .logo--main, .navbar-default, .settings, .subscribe {
+.col-xs-12, .navbar-default, .settings {
   width: 100%;
 }
 
@@ -1977,7 +1977,7 @@ pre code {
 }
 
 @media (min-width: 768px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .settings, .subscribe, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .navbar-default {
+  .col-sm-1, .col-sm-2, .col-sm-3, .settings, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .navbar-default {
     float: left;
   }
 
@@ -1989,7 +1989,7 @@ pre code {
     width: 16.6666666667%;
   }
 
-  .col-sm-3, .settings, .subscribe {
+  .col-sm-3, .settings {
     width: 25%;
   }
 
@@ -5352,7 +5352,8 @@ a.thumbnail.active {
 .media > .pull-left,
 .media > .source__btn-group,
 .media > .source__buttons--success,
-.media > .source__buttons--danger {
+.media > .source__buttons--danger,
+.media > .subscribe {
   padding-right: 10px;
 }
 
@@ -6583,7 +6584,7 @@ button.close {
   float: right !important;
 }
 
-.pull-left, .source__btn-group, .source__buttons--success, .source__buttons--danger {
+.pull-left, .source__btn-group, .source__buttons--success, .source__buttons--danger, .subscribe {
   float: left !important;
 }
 
@@ -6591,7 +6592,7 @@ button.close {
   display: none !important;
 }
 
-.show, .source__buttons--success:after, .source__buttons--success, .source__buttons--danger, .subscribe__links, .list__header:before {
+.show, .source__buttons--success:after, .logo--main, .source__buttons--success, .source__buttons--danger, .subscribe__links, .big-news__img--wrapper, .list__header:before {
   display: block !important;
 }
 
@@ -6860,6 +6861,11 @@ button.close {
   color: #ccc;
 }
 
+.subscribe__links:hover, .big-news__img--wrapper:hover > img:hover, .list__header--link:hover {
+  -webkit-transition: 1s;
+          transition: 1s;
+}
+
 html {
   font-size: 13px;
 }
@@ -6949,6 +6955,7 @@ h1, h4 {
 }
 
 .subscribe {
+  width: 100%;
   border-radius: 4px;
 }
 .subscribe__links {
@@ -6962,21 +6969,31 @@ h1, h4 {
   padding: 0 0.5384615385rem 0 0.2307692308rem;
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  .dropdown-list--subscribe {
+    -webkit-columns: 4 auto;
+       -moz-columns: 4 auto;
+            columns: 4 auto;
+  }
+}
+
 .big-news {
   margin: 0 auto 1.5384615385rem auto;
-  min-height: 12.3076923077rem;
-  min-width: 19.6153846154rem;
   background-color: #ea4c88;
 }
 @media (max-width: 767px) and (min-width: 481px) {
   .big-news {
     max-width: 33.5384615385rem;
-    min-height: 18.8461538462rem;
   }
 }
-@media (max-width: 480px) {
+@media (min-width: 768px) {
   .big-news {
-    max-width: 23.0769230769rem;
+    width: 31%;
+    margin-bottom: 1.5384615385rem;
+    float: left;
+  }
+  .big-news:nth-child(3n+2) {
+    margin: 0 3.5% 1.5384615385rem;
   }
 }
 .big-news__header, .big-news__paragraph {
@@ -6996,13 +7013,8 @@ h1, h4 {
 .big-news__source-and-time {
   padding-right: 0.3846153846rem;
 }
-.big-news__img--wrapper {
-  position: relative;
-}
 .big-news__img--wrapper:hover > img {
   opacity: .1;
-  -webkit-transition: .6s;
-          transition: .6s;
 }
 
 .list__header {
@@ -7026,12 +7038,12 @@ h1, h4 {
   padding: 0 1.1538461538rem;
 }
 
-.dropdown-list {
+.dropdown-list, .dropdown-list--subscribe {
   background-color: #E2E0D7;
-  position: static;
+  position: relative;
 }
 @media (max-width: 767px) and (min-width: 481px) {
-  .dropdown-list {
+  .dropdown-list, .dropdown-list--subscribe {
     max-width: 33.5384615385rem;
     padding-left: 0.7692307692rem;
     margin: auto;
@@ -7053,21 +7065,33 @@ h1, h4 {
   padding-top: 2.3846153846rem;
 }
 
-.settings--wrapper,
+.settings,
 .main,
+.subscribe,
 .header--wrapper {
   margin: auto;
 }
-@media (max-width: 767px) {
-  .settings--wrapper,
+@media (min-width: 992px) {
+  .settings,
   .main,
+  .subscribe,
+  .header--wrapper {
+    max-width: 940px;
+  }
+}
+@media (max-width: 767px) {
+  .settings,
+  .main,
+  .subscribe,
   .header--wrapper {
     width: 84%;
+    float: none;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .settings--wrapper,
+  .settings,
   .main,
+  .subscribe,
   .header--wrapper {
     width: 95%;
   }

@@ -4,16 +4,19 @@
 	// Контейнер для всего что содержит новость
 	margin: 0 auto rem(20px) auto;
 	@include xs {
-		max-width : rem(436px);
-		min-height: rem(245px);
+		max-width: rem(436px);
 	}
 
-	@include sxs {
-		max-width: rem(300px);
+	@include sm-and-lg {
+		width: 31%;
+		margin-bottom: rem(20px);
+		float: left;
+
+		&:nth-child(3n+2) {
+			margin: 0 3.5% rem(20px);
+		}
 	}
 
-	min-height      : rem(160px);
-	min-width       : rem(255px);
 	background-color: $link-hover-color;
 
 	&__text {
@@ -28,11 +31,11 @@
 	&__header,
 	&__paragraph,
 	&__source-and-time {
-		color         : $white;
+		color: $white;
 	}
 
 	&__header {
-		font-size     : rem(13px);
+		font-size: rem(13px);
 	}
 
 	&__paragraph {
@@ -50,11 +53,12 @@
 	}
 	// Ссылка обертка для картинки
 	&__img--wrapper {
-		position: relative;
+		@extend %position-relative;
+		@extend .show;
 
 		&:hover>img {
+			@extend %isTransition--hover;
 			opacity: .1;
-			transition: .6s;
 		}
 	}
 }

@@ -1,13 +1,21 @@
 // Обертки для блоков
-.settings--wrapper,
+.settings,
 .main,
+.subscribe,
 .header--wrapper {
 	margin: auto;
+
+	@include md-and-lg {
+		max-width: 940px;
+	}
+
 	@include xs-and-less {
 		width : 84%;
+		float: none;
 	}
 
 	@include sm {
 		width: 95%;
 	}
+
 }

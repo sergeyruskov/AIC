@@ -23,20 +23,18 @@
 				<!-- Логотип -->
 				<a href="/" class="logo--main">AIC</a>
 
-				<nav class="navbar navbar-default" role="navigation">
-					<div class="container" data-ng-controller="navMenuCtrl">
-						<!-- Иконка для мобильных устройств, куда будет прятаться меню -->
-						<div class="navbar-header">
+<!-- 				<nav class="navbar navbar-default" role="navigation">
+					<div class="container" data-ng-controller="navMenuCtrl"> -->
+<!-- 						<div class="navbar-header">
 							<button type="button" ng-click="isCollapsed = !isCollapsed" class="navbar-toggle collapsed">
 								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-						</div>
+						</div> -->
 
-						<!-- Навигационное меню -->
-						<div collapse="isCollapsed" class="collapse navbar-collapse">
+<!-- 						<div collapse="isCollapsed" class="collapse navbar-collapse">
 							<ul class="nav navbar-nav">
 								<li class="active"><a href="#">Домашняя</a></li>
 								<li><a href="#">Блог</a></li>
@@ -55,9 +53,9 @@
 								<li><a href="#">Работа</a></li>
 								<li><a href="#">Контакты</a></li>
 							</ul>
-						</div>
-					</div>
-				</nav>
+						</div> -->
+<!-- 					</div>
+				</nav> -->
 			</div>
 		</div>
 	</header>
@@ -121,7 +119,23 @@
 					<a ng-click="isCollapsedVaria = !isCollapsedVaria" class="list__header--link" href>Подписки <span class="caret"></span></a>
 				</h4>
 
-				<div collapse="isCollapsedVaria" class="dropdown-list">
+				<div collapse="isCollapsedVaria" class="dropdown-list--subscribe">
+						<a class="subscribe__links" href="#">
+							<img class="subscribe__img" src="img/lists/source-logo/youtube.ico" alt="YouTube">Lorem ipsum dolor sit amet
+						</a>
+						<a class="subscribe__links" href="#">
+							<img class="subscribe__img" src="img/lists/source-logo/youtube.ico" alt="YouTube">Lorem ipsum dolor sit amet
+						</a>
+						</a>
+						<a class="subscribe__links" href="#">
+							<img class="subscribe__img" src="img/lists/source-logo/youtube.ico" alt="YouTube">Lorem ipsum dolor sit amet
+						</a>
+						<a class="subscribe__links" href="#">
+							<img class="subscribe__img" src="img/lists/source-logo/youtube.ico" alt="YouTube">Lorem ipsum dolor sit amet
+						</a>
+						<a class="subscribe__links" href="#">
+							<img class="subscribe__img" src="img/lists/source-logo/youtube.ico" alt="YouTube">Lorem ipsum dolor sit amet
+						</a>
 						<a class="subscribe__links" href="#">
 							<img class="subscribe__img" src="img/lists/source-logo/youtube.ico" alt="YouTube">Lorem ipsum dolor sit amet
 						</a>
@@ -236,19 +250,6 @@
 			</h4>
 
 			<div collapse="isCollapseInteresting">
-
-				<section class="big-news">
-					<div class="big-news__text">
-						<h2 class="big-news__header">Lorem ipsum dolor sit amet</h2>
-						<p class="big-news__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non odio quam cumque reprehenderit sequi quas.</p>
-						<span class="big-news__source-and-time">
-							<span class="big-news__source__time">9ч</span> назад на <span class="big-news__time__source">YouTube</span>
-						</span>
-					</div>
-					<a href="#" class="big-news__img--wrapper">
-						<img src="http://lorempixel.com/436/273/fashion" alt="Fashion">
-					</a>
-				</section>
 
 				<section class="big-news">
 					<div class="big-news__text">

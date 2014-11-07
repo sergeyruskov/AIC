@@ -4,6 +4,8 @@
 	}
 }
 
-// a:hover {
-// 	transition: 1s;
-// }
+%isTransition--hover {
+	&:hover {
+		transition: 1s;
+	}
+}

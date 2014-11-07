@@ -24,5 +24,6 @@
 	&--link {
 		background-color: $body-bg;
 		padding         : 0 rem(15px);
+		@extend %isTransition--hover;
 	}
 }
