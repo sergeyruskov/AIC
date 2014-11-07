@@ -1,0 +1,37 @@
+%inline-block {
+	display: inline-block;
+}
+
+%align-center {
+	text-align: center;
+}
+
+%overflow-hidden {
+	overflow: hidden;
+}
+
+%position-relative {
+	position: relative;
+}
+
+%position-absolute {
+	position: absolute;
+}
+
+%content {
+	content: "";
+}
+
+%margin-auto {
+	margin: auto;
+}
+
+%pseudo {
+	@extend %content;
+	@extend .show;
+}
+
+// Оформление для текста в списках
+%text-shadow-lists {
+	text-shadow: 0 rem(1px) $white;
+}

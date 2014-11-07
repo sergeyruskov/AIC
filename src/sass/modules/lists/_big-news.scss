@@ -1,0 +1,64 @@
+.big-news {
+	@extend %position-relative;
+	@extend %overflow-hidden;
+	// Контейнер для всего что содержит новость
+	margin: 0 auto rem(20px) auto;
+	@include xs {
+		max-width : rem(436px);
+		min-height: rem(245px);
+	}
+
+	@include sxs {
+		max-width: rem(300px);
+	}
+
+	min-height      : rem(160px);
+	min-width       : rem(255px);
+	background-color: $link-hover-color;
+
+	&__text {
+		@extend %position-absolute;
+	}
+
+	&__header,
+	&__paragraph {
+		padding: 0  rem(5px) rem(7px) rem(5px);
+	}
+
+	&__header,
+	&__paragraph,
+	&__source-and-time {
+		color         : $white;
+	}
+
+	&__header {
+		font-size     : rem(13px);
+	}
+
+	&__paragraph {
+		@extend %overflow-hidden;
+
+		font-size     : rem(11px);
+		padding-bottom: rem(18px);
+
+		max-height    : rem(160px);
+	}
+
+	&__source-and-time {
+		@extend .pull-right;
+		padding-right: rem(5px);
+	}
+	// Ссылка обертка для картинки
+	&__img--wrapper {
+		position: relative;
+
+		&:hover>img {
+			opacity: .1;
+			transition: .6s;
+		}
+	}
+}
+// Ссылочка внизу страницы, на доп новости
+.more-news {
+	@extend .pull-right;
+}

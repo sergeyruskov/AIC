@@ -1,0 +1,102 @@
+.settings {
+	@extend .col-xs-12;
+	@extend .col-sm-3;
+	border-radius : $border-radius-base;
+}
+
+// Обертка для названия и кнопок вкл/выкл
+.source {
+	@extend %overflow-hidden;
+	height       : rem(40px);
+	margin-bottom: rem(15px);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+	// Название источника
+	&__text {
+		@extend %text-shadow-lists;
+		// Выравнивание текста по центу
+		&:before {
+			@extend %content;
+			@extend %inline-block;
+			vertical-align: middle;
+			height        : 100%;
+		}
+	}
+
+	// Кнопки вкл/выкл
+
+	// Обертка для кнопок
+
+	&__btn-group {
+		@extend .pull-left;
+		@extend %overflow-hidden;
+
+		width        : rem(60px);
+		height       : 100%;
+		border       : rem(1px) solid;
+		border-radius: $border-radius-large;
+	}
+
+	
+	&__buttons--success,
+	&__buttons--danger {
+		@extend .show;
+		@extend .pull-left;
+		@extend %position-relative;
+
+		width : 100%;
+		height: 100%;
+
+		margin : 0;
+		cursor : pointer;
+		z-index: 1; // поверх danger
+		transition: 1s;
+		// Выравнивание текста по центу
+		&:before {
+			@extend %content;
+			@extend %inline-block;
+			vertical-align: middle;
+			height        : 100%;
+		}
+	}
+
+	
+	&__buttons--success {
+		@extend .btn-success;
+		@extend %position-relative;
+
+		padding-left: rem(10px);
+		margin-left : 0;
+		// Переключатель(серая полоска с боку)
+		&:after {
+			@extend %pseudo;
+			@extend %position-absolute;
+			width : 25%;
+			height: 100%;
+
+			background-color: $body-bg;
+
+			top   : 0;
+			right : 0;
+		}
+	}
+	// Подкладываем эту кнопку под кнопку success
+	&__buttons--danger {
+		@extend .btn-danger;
+		text-align: right;
+		padding-right: rem(5px);
+		bottom: 100%;
+		z-index: 0;
+	}
+}
+
+//AngularJS сдвигает кнопку success чтобы было видно danger(которая под success)
+.toggle_off {
+	margin-left: -75%;
+}
+//AngularJS Отключаем transition при загрузки страницы
+.first_load_toggle {
+	transition: 0;
+}

@@ -1,0 +1,8 @@
+dist/images/Thumbs.db
+src/node_modules
+cache
+
+### Node ###
+# Logs
+logs
+*.log

@@ -1,0 +1,21 @@
+//Подключаем шрифты
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700,400);
+
+// Для правильного расчета по функции rem
+html {
+	font-size: 13px;
+}
+
+h1, h4 {
+	color         : $link-color;
+	text-transform: uppercase;
+}
+
+img {
+	@extend .img-responsive;
+}
+
+// Глюк, если не поставить то в при открытии мобильной иконки снизу иконки появляется белая полоса
+.navbar-collapse {
+	box-shadow: none;
+}

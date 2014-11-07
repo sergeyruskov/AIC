@@ -1,0 +1,13 @@
+// Обертки для блоков
+.settings--wrapper,
+.main,
+.header--wrapper {
+	margin: auto;
+	@include xs-and-less {
+		width : 84%;
+	}
+
+	@include sm {
+		width: 95%;
+	}
+}

@@ -1,0 +1,23 @@
+.subscribe {
+	@extend .col-xs-12;
+	@extend .col-sm-3;
+	border-radius : $border-radius-base;
+
+	&__links {
+		@extend .show;
+		@extend %text-shadow-lists;
+		@extend %overflow-hidden;
+		
+		color        : $text-color;
+		padding      : rem(5px) 0;
+		white-space  : nowrap;
+		text-overflow: ellipsis;
+	}
+
+	&__img {
+		@extend %inline-block;
+		height : 1em;
+		padding: 0 rem(7px) 0 rem(3px);
+	}
+}
+

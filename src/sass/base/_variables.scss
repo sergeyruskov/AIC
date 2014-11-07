@@ -1,0 +1,52 @@
+// Цвета
+$white  : #fff;
+$black  : #000;
+$list-bg: #E2E0D7;
+
+// Шрифты
+
+// CapsLock, заголовки
+$font--yanone: 'Yanone Kaffeesatz', Arial, 'Helvetica Neue', 'Helvetica', sans-serif;
+
+// Bootstrap
+
+// Links
+$link-hover-decoration          : none;
+$navbar-default-link-hover-color: #aaa;
+$link-hover-color               : #ea4c88;
+
+// Растояние между колонками
+$grid-gutter-width: 0;
+
+// Размер шрифта
+$font-size-base   : 13px;
+
+// Шрифты
+$font-family-base : Helvetica, 'Helvetica Neue', sans-serif;
+
+// Header
+
+// Background navbar
+$navbar-default-bg               : transparent;
+$navbar-default-link-active-color: #aaa;
+$navbar-default-link-color       : $white;
+
+// Цвета ссылок 
+$link-color: #444;
+
+// Глобальный цвет текста
+$text-color: #888;
+
+// Цвет bg body
+$body-bg   : #EBEBE8;
+
+// Slider
+
+// Кнопки управления
+$carousel-control-width: 27px;
+// Размер иконки управления
+$carousel-control-font-size: 10px;
+//Прозрачность кнопок контроля
+$carousel-control-opacity: 1;
+// Цвет кнопок контроля
+$carousel-control-color: #9a9a9a;

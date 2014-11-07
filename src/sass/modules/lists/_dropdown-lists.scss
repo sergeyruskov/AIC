@@ -1,0 +1,11 @@
+// Выпадающее меню
+.dropdown-list {
+	background-color: $list-bg;
+	position        : static;
+	@include xs {
+		max-width   : rem(436px);
+		padding-left: rem(10px);
+
+		margin      : auto;
+	}
+}

@@ -1,0 +1,11 @@
+.logo--main {
+	@extend .col-xs-12;
+	// Из state состояние hover
+	@extend %isLogo--hover;
+
+	// Декоративные эффекты
+	color         : $white;
+	font          : 700 rem(48px)#{/1.5} $font--yanone;
+	letter-spacing: rem(3px);
+	text-shadow   : rem(2px) rem(2px) $black;
+}

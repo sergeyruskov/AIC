@@ -1,0 +1,13 @@
+.header {
+	// Задний фон header
+	background: $link-color url("../img/header/bg.png") bottom left repeat-x;
+	
+	// Полоска с полосками под header
+	&:after {
+		content         : "";
+		display         : block;
+		background-color: $body-bg;
+		height          : 8px;
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAIAQMAAAALP6d4AAAABlBMVEXq6uo6OjoDR5iEAAAAAnRSTlMzMz0oyR4AAAATSURBVAjXY+BgaGBwYFBgEICwAA1AAcHm4fvxAAAAAElFTkSuQmCC');
+	}
+}

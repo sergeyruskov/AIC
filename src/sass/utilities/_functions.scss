@@ -1,0 +1,58 @@
+// Конвертирует px в rem
+@function rem($target) {
+	@return ( $target / $font-size-base ) * 1rem;
+}
+
+// Media queries
+//Super eXtra Small devices
+$screen-sxs-max: 480px;
+$screen-xs-min : 481px;
+
+// Менее 480px включительно
+@mixin sxs {
+	@media (max-width: $screen-sxs-max) {
+		@content;
+	}
+}
+
+// Более 481px включительно и менее 767px включительно
+@mixin xs {
+	@media (max-width: $screen-xs-max) and (min-width: $screen-xs-min) {
+		@content;
+	}
+}
+
+// Менее 767px включительно и до минимального размера экрана
+@mixin xs-and-less {
+	@media (max-width: $screen-xs-max) {
+		@content;
+	}
+}
+
+// Более 768px включительно и менее 991px включительно
+@mixin sm {
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		@content;
+	}
+}
+
+// Менее 991px включительно и до минимального размера экрана
+@mixin sm-and-less {
+	@media (max-width: $screen-sm-max) {
+		@content;
+	}
+}
+
+// Более 992px включительно и менее 1199 включительно
+@mixin md {
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+		@content;
+	}
+}
+
+// Более 1200px включительно
+@mixin lg {
+	@media (min-width: $screen-lg-min) {
+		@content;
+	}
+}

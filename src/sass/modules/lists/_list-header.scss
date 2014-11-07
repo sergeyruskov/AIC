@@ -1,0 +1,28 @@
+// Заголовок-ссылка для выпадающего списка
+.list__header {
+	@extend %align-center;
+	font          : rem(24px) $font--yanone;
+	letter-spacing: -.9px;
+
+	cursor          : pointer;
+	@include xs {
+		max-width: rem(436px);
+		margin   : 0 auto rem(15px) auto;
+	}
+
+	&:before {
+		@extend .show;
+		@extend %position-relative;
+		@extend %content;
+
+		border-top: rem(1px) solid #BCBCB9;
+
+		z-index   : -1;
+		top       : rem(15px);
+	}
+
+	&--link {
+		background-color: $body-bg;
+		padding         : 0 rem(15px);
+	}
+}
