@@ -1,0 +1,13 @@
+.main {
+	width: 90%;
+	@extend %margin-auto;
+
+	@include md-and-lg {
+		max-width: 940px;
+	}
+}
+
+// Растояние между группами
+.row {
+	padding-top: rem(15px);
+}

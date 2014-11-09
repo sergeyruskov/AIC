@@ -2,21 +2,10 @@
   'use strict';
   var app;
 
-  app = angular.module('controller', []);
-
-  app.controller('navMenuCtrl', [
-    '$scope', 'matchmedia', function($scope, matchmedia) {
-      return matchmedia.onPhone(function(mediaQueryList) {
-        $scope.isPhone = mediaQueryList.matches;
-        if ($scope.isPhone) {
-          return $scope.isCollapsed = true;
-        }
-      });
-    }
-  ]);
+  app = angular.module('settings', []);
 
   app.controller('listsCtrl', [
-    '$scope', function($scope) {
+    '$scope', '$http', function($scope, $http) {
       $scope.isCollapsedSettings = false;
       this["class"] = 'first_load_toggle';
       this.delete_first_load_toggle = (function(_this) {
@@ -43,7 +32,20 @@
       this.trinixy_toggle = new this.toggle;
       this.trinixy_toggle.toggle_off = 0;
       this.motor_toggle = new this.toggle;
-      return this.motor_toggle.toggle_off = 1;
+      this.motor_toggle.toggle_off = 1;
+      $http.get('json/subscribe.json').success((function(_this) {
+        return function(data) {
+          return _this.successAnswer(data);
+        };
+      })(this));
+      return this.successAnswer = (function(_this) {
+        return function(data) {
+          var subscribe;
+          subscribe = data.subscribe;
+          _this.youtube = subscribe.youtube;
+          return _this.habrahabr = subscribe.habrahabr;
+        };
+      })(this);
     }
   ]);
 

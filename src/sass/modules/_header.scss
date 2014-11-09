@@ -1,4 +1,4 @@
-.header {
+header {
 	// Задний фон header
 	background: $link-color url("../img/header/bg.png") bottom left repeat-x;
 	
@@ -11,3 +11,16 @@
 		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAIAQMAAAALP6d4AAAABlBMVEXq6uo6OjoDR5iEAAAAAnRSTlMzMz0oyR4AAAATSURBVAjXY+BgaGBwYFBgEICwAA1AAcHm4fvxAAAAAElFTkSuQmCC');
 	}
 }
+
+	.logo--main {
+		// Из state состояние hover
+		@extend %isLogo--hover;
+		@extend %align-center;
+		@extend .show;
+
+		// Декоративные эффекты
+		color         : $white;
+		font          : 700 rem(48px)#{/1.5} $font--yanone;
+		letter-spacing: rem(3px);
+		text-shadow   : rem(2px) rem(2px) $black;
+	}

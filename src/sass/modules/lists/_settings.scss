@@ -1,6 +1,5 @@
 .settings {
-	@extend .col-xs-12;
-	@extend .col-sm-3;
+	@extend .row;
 	border-radius : $border-radius-base;
 }
 

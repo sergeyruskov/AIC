@@ -15,7 +15,6 @@
     "gulp-rename": "latest",
     "gulp-uglify": "latest",
     "gulp-webserver": "latest",
-    "newrelic": "latest",
     "streamqueue": "latest"
   }
 }

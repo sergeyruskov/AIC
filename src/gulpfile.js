@@ -89,23 +89,25 @@ gulp.task("favicon", function () {
 
 //Move json
 gulp.task("json-minify", function () {
-	return gulp.src(["js/plugins/angularjs/database.json"])
+	return gulp.src(["json/**"])
 		.pipe(jsonminify())
-		.pipe(gulp.dest("../dist/js"));
+		.pipe(gulp.dest("../dist/json"));
 });
 
 // Watch
 gulp.task("watch", function () {
-	gulp.watch("sass/**/**/*.scss", ["compass"]);
+	gulp.watch("sass/**/**/**", ["compass"]);
 	gulp.watch("index.html", ["minifyHtml"]);
-	gulp.watch("js/**/**/*.js", ["scripts"]);
-	gulp.watch("coffee/*.coffee", ["coffee"]);
+	gulp.watch("js/**/**/**", ["scripts"]);
+	gulp.watch("coffee/**", ["coffee"]);
 	gulp.watch("fonts/**/**", ["fonts"]);
 	gulp.watch("img/**/**", ["imagemin"]);
-	gulp.watch("js/plugins/angularjs/database.json", ["json"]);
+	gulp.watch("json/**", ["json-minify"]);
 
 	livereload.listen();
 	gulp.watch(distPath + 'css/styles.css').on('change', livereload.changed);
 	gulp.watch(distPath + 'index.html').on('change', livereload.changed);
 	gulp.watch(distPath + 'js/script.js').on('change', livereload.changed);
+	gulp.watch(distPath + 'img/**/**/**').on('change', livereload.changed);
+	gulp.watch(distPath + 'json/**').on('change', livereload.changed);
 });

@@ -1,5 +1,7 @@
 dist/images/Thumbs.db
 src/node_modules
+src/gulpfile.js
+src/package.json
 cache
 
 ### Node ###

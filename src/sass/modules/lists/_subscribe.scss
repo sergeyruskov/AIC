@@ -1,6 +1,5 @@
 .subscribe {
-	@extend .pull-left;
-	width         : 100%;
+	@extend .row;
 	border-radius : $border-radius-base;
 
 	&__links {

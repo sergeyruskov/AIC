@@ -1,0 +1,24 @@
+{
+	"subscribe":{
+		"youtube": {
+			"img"   : "youtube.ico",
+			"headers" : ["header0", "header1", "header2"]
+		},
+		"habrahabr": {
+			"img": "habrahabr.png",
+			"headers": ["header0", "header1"]
+		},
+		"pikaby": {
+			"img": "New product",
+			"header": "header"
+		},
+		"trinixy": {
+			"img": "New product",
+			"header": "header"
+		},
+		"motor": {
+			"img": "New product",
+			"header": "header"
+		}
+	}
+}

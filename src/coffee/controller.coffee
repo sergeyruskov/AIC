@@ -1,18 +1,9 @@
 'use strict';
 
-app = angular.module('controller', [])
+app = angular.module('settings', [])
 
-app.controller('navMenuCtrl',['$scope', 'matchmedia', ($scope, matchmedia)->
-	# Сварачиваем главное навигационное меню, когда разрешение становится меньше 767px
-	matchmedia.onPhone( (mediaQueryList)->
-		$scope.isPhone = mediaQueryList.matches
-		if $scope.isPhone
-			$scope.isCollapsed = true # В каком состоянии показывать меню на телефоне при загрузке
-	);
-])
-
-app.controller('listsCtrl', ['$scope', ($scope)->
-	#При загрузке страницы список с настроками в открытом или в закрытом состоянии
+app.controller('listsCtrl', ['$scope', '$http', ($scope, $http)->
+	#При загрузке страницы список с настройками в открытом или в закрытом состоянии
 	$scope.isCollapsedSettings = false
 
 	# Кнопки переключения подписок
@@ -46,4 +37,22 @@ app.controller('listsCtrl', ['$scope', ($scope)->
 	@motor_toggle = new @toggle
 	@motor_toggle.toggle_off = 1
 
-])
+
+
+
+
+	#Получение новостей. Важно помнить, что получаем мы их не сразу
+
+	$http.get('json/subscribe.json').success((data)=>
+		@successAnswer(data)
+	)
+
+	@successAnswer = (data) =>
+		subscribe = data.subscribe
+
+		@youtube = subscribe.youtube
+		@habrahabr = subscribe.habrahabr
+
+
+
+])#Конец контроллера
